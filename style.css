@@ -56,7 +56,7 @@ body {
 /* Portfolio Grid */
 .portfolio-boxes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
@@ -101,10 +101,11 @@ body {
 
 /* Card Title */
 .portfolio-box h3 {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 700;
     color: #1e293b;
     margin-bottom: 12px;
+    line-height: 1.4;
 }
 
 /* Card Description */
@@ -152,36 +153,34 @@ body {
     background: #e8f5ff;
 }
 
+/* Currently Working Projects */
+.current .card-icon {
+    background: #fff7df;
+}
+
 /* Tablet Responsive */
-@media (max-width: 768px) {
-
-    .portfolio-section {
-        padding: 65px 20px;
-    }
-
-    .section-heading h1 {
-        font-size: 32px;
-    }
+@media (max-width: 900px) {
 
     .portfolio-boxes {
-        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
     }
 
     .portfolio-box {
-        padding: 25px;
-        min-height: 260px;
+        padding: 28px;
     }
 
-    .portfolio-box h3 {
-        font-size: 18px;
-    }
 }
 
 /* Mobile Responsive */
 @media (max-width: 550px) {
 
-    .portfolio-boxes {
-        grid-template-columns: 1fr;
+    .portfolio-section {
+        padding: 60px 15px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
     }
 
     .section-heading h1 {
@@ -192,8 +191,18 @@ body {
         font-size: 14px;
     }
 
+    .portfolio-boxes {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
     .portfolio-box {
         min-height: 240px;
+        padding: 25px;
+    }
+
+    .portfolio-box h3 {
+        font-size: 18px;
     }
 
 }
