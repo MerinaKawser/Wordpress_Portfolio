@@ -56,6 +56,10 @@ h3{font-weight:700;font-size:1.3rem;line-height:1.25;letter-spacing:-.01em}
 .tag.live{position:relative;padding-left:22px;background:#fff}
 .tag.live::before{content:"";position:absolute;left:10px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--accent);animation:pulse 1.8s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.3}}
+.progress-link{margin-left:auto;flex:none;display:inline-flex;align-items:center;gap:6px;padding:12px 20px;background:var(--accent);color:#fff;border-radius:8px;font-size:.92rem;font-weight:600;transition:background .2s,transform .2s,box-shadow .2s}
+.progress-link i{font-style:normal;display:inline-block;transition:transform .25s}
+.progress-link:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(91,95,239,.7)}
+.progress-link:hover i{transform:translate(3px,-3px)}
 
 /* cards */
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
@@ -79,6 +83,7 @@ h3{font-weight:700;font-size:1.3rem;line-height:1.25;letter-spacing:-.01em}
   .nav{padding:14px var(--pad)}
   .card{padding:24px}
   .progress{padding:22px;flex-direction:column;align-items:flex-start}
+  .progress-link{margin-left:0}
   .footer{flex-direction:column;align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
